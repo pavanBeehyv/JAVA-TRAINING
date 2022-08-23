@@ -14,7 +14,8 @@ public class Main {
             System.out.println("even");
         }else
             System.out.println("odd");
-
+        b= (a%2==0)?0:1; //ternary operator condition?value1:value2
+        System.out.println(b);
         System.out.println(r);
         System.out.println(r1);
         System.out.println(r2);
