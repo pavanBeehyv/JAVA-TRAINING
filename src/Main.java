@@ -5,6 +5,9 @@ public class Main {
         int r = m+n;
         int r1=r-2*m;
         int r2 = r-2*n;
+        int a = m++; //a==m & then increment value of m
+        int b = ++n; //increment n & assign it's value to b
+        System.out.println(a+""+b);
         if(r==0){
             System.out.println("nothing");}
         else if (r % 2 == 0) {
