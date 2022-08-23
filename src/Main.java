@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        int n = 6;
+        int n = 0;
         switch (n) {
             case 1:
                 System.out.println("one");
@@ -21,7 +21,8 @@ public class Main {
             case 6:
                 System.out.println("six");
                 break;
-
+            default:
+                System.out.println("no match");
 
         }
     }
