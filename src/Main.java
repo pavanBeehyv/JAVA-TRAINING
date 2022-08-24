@@ -2,7 +2,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         int n = 0;
-        switch (n) {
+        char a ='A';
+        String s ="abc";
+        switch (a) {
             case 1:
                 System.out.println("one");
                 break;
@@ -20,6 +22,9 @@ public class Main {
                 break;
             case 6:
                 System.out.println("six");
+                break;
+            case 'A':
+                System.out.println("char & string allowed in switch");
                 break;
             default:
                 System.out.println("no match");
