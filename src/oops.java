@@ -1,40 +1,32 @@
- class Calc{
-    int i ;
-    float j;
-    float k; //instance variable
-    public float add(){
-        k=i+j;
-        return k;
+class Emp{
+    int eid;
+    int salary;
+    static String ceo; //static variables are same for all the objects
+    static{//when u load a class
+//        eid =1; //non static variables can't be used from static context
+        ceo="pavan";
+        System.out.println("static block called only once");
     }
-    public Calc(int i,float j){
-        this.i=i;
-        this.j=j;
-        i=i;//here local variables are overshadowing instance variables when names are given same
+    public Emp(){   //when u create a object
+        eid=3;
+        salary=300;
+        System.out.println("in constructor default");
     }
-    public Calc(){
-        i = 4;
-        j=2;
+    public Emp(int i,int salary){
+        this.salary=salary;
+        eid=i;
     }
-    public Calc(double d){   //we can have multiple constructors with different signature
-        i=(int)d;            // d here is local variable
-        j= (float) d;
-
+    public void show(){
+        System.out.println(eid+" "+salary+ " "+ceo);
     }
 }
-
 public class oops {
-    public static void main(String args[]){
-        Calc obj;
-        obj =new Calc();//constructor called
-         float a =obj.add();
-        System.out.println(a);
-        obj.i=1;
-        obj.j=2.5f;
-        System.out.println(obj.add());
-        Calc obj1 =new Calc(5.8); //polymorphism constructor overloading
-        System.out.println(obj1.i+" "+obj1.j+" "+obj1.add());
-        Calc obj2 = new Calc(6,8.127f);
-        System.out.println(obj2.add());
-
+    public static void main(String args[]) {
+        Emp navin = new Emp();
+        navin.eid=5;
+        navin.salary=400;
+        navin.show();
+        Emp rocky =new Emp(2,500);
+        rocky.show();
     }
 }
