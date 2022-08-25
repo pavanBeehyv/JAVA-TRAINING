@@ -8,7 +8,7 @@ class A{
 }
 class B extends A{
     public B(){
-        super();
+        super();        //super represents parent class object
         System.out.println("in B");
     }
     public B(int i){
