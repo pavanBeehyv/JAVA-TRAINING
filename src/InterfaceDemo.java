@@ -8,7 +8,7 @@ class CalcAdv extends Calculator{  //sub,child,Derived
         return i-j;
     }
 }
-class AdvCalc extends CalcAdv{
+class AdvCalc extends CalcAdv{  //multi level inheritance,java doesn't support multiple inheritance though oops supports it
     public int multiply(int i ,int j){
         return i*j;
     }
