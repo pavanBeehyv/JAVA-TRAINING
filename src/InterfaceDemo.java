@@ -22,8 +22,8 @@ public class InterfaceDemo {
 
         Kit k =new Kit();
         Writer p = new Pen();
-        Writer pc= new Pencil(); //we can create referance of interface but not object of interface
-        k.doSomething(p);
+        Writer pc= new Pencil(); //we can create reference of interface but not object of interface
+        k.doSomething(p);  //we can't create object of an interface, but we can create obj of a class which implements interface
         k.doSomething(pc);
 
     }
