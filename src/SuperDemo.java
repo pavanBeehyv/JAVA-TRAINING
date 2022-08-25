@@ -1,24 +1,26 @@
 class A{
-    public A(){
+    public void show(){
         System.out.println("in A");
-    }
-    public A(int i){
-        System.out.println("in A int");
     }
 }
 class B extends A{
-    public B(){
-        super();        //super represents parent class object
+    @Override
+    public void show(){
         System.out.println("in B");
     }
-    public B(int i){
-        super(i);
-        System.out.println("in B int");
+}
+class C extends A{
+    public void show(){
+        System.out.println("in C");
     }
 }
 public class SuperDemo {
     public static void main(String args[]){
-    B obj =new B(1); //both the constructors of child & parent class are called with obj creation of child class
-                    //this is due to presence of default super() method in child class
+    A obj =new B(); //runtime polymorphism
+    obj.show();
+    obj =new C();  //once changing object it's changing calling
+    obj.show();     // this is called as Dynamic method dispatch
+
+
     }
 }
