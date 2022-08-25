@@ -1,4 +1,4 @@
-//Encapsulation -> binding data with methods
+//Encapsulation -> binding data with methods ,we should always access data through methods
 class Student{
     private int rollno;   //object knows something refers to fields
     private String name;
