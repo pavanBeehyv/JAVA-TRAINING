@@ -1,23 +1,30 @@
-class Calculator{   //super,parent,base
-    public int add(int i,int j){
-        return i+j;
+interface Writer {   //100% abstract all methods are only declared,undefined
+    void write();  // all methods in interface are public abstract by default
+}
+class Pen implements Writer{
+    public void write(){
+        System.out.println("i am pen");
     }
 }
-class CalcAdv extends Calculator{  //sub,child,Derived
-    public int sub(int i,int j){
-        return i-j;
-    }
+class Pencil implements Writer{ //multiple interfaces can be implemented
+public void write(){
+        System.out.println("i am pencil");
+        }
 }
-class AdvCalc extends CalcAdv{  //multi level inheritance,java doesn't support multiple inheritance though oops supports it
-    public int multiply(int i ,int j){
-        return i*j;
+class Kit{
+    public void doSomething(Writer p){
+        p.write();
+
     }
 }
 public class InterfaceDemo {
-    public static void main(String args[]){
-    AdvCalc obj = new AdvCalc();
-        System.out.println(obj.add(8,4));
-        System.out.println(obj.sub(8,4));
-        System.out.println(obj.multiply(8,4));
+    public static void main(String[]args){
+
+        Kit k =new Kit();
+        Writer p = new Pen();
+        Writer pc= new Pencil(); //we can create referance of interface but not object of interface
+        k.doSomething(p);
+        k.doSomething(pc);
+
     }
 }
