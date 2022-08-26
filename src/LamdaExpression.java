@@ -6,8 +6,13 @@ interface CDE{
     default void display(){
         System.out.println("CDE default method");
     }
+    static void screen(){
+        System.out.println("static methods with implementation are allowed from java-1.8 in interfaces");
+    }
 }
 interface DEF{
+    int num=6;
+//    num=3; By default variables created inside interface are final(constant)
     void show();
     default void display(){
         System.out.println("DEF default method");
@@ -39,5 +44,6 @@ public class LamdaExpression {
         CdeImpl o = new CdeImpl();
         o.show();
         o.display();
+        CDE.screen(); //we have called a static method from interface without obj creation
     }
 }
