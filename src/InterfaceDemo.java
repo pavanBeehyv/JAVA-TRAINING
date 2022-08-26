@@ -1,5 +1,5 @@
 import java.io.Serializable;
-
+//interfaces can now have a non-abstract default method with implementation from java 1.8 onwards
 //INTERFACE TYPES
 // Normal-having more than 1 abstract methods
 //single abstract method -functional interface(from java 1.8) -wherever there's functional interface we can use -Lamda expression-it's aconcept from scala
