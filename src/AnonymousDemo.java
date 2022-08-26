@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 interface ABC{
     void show();
 }

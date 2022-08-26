@@ -1,3 +1,10 @@
+import java.io.Serializable;
+
+//INTERFACE TYPES
+// Normal-having more than 1 abstract methods
+//single abstract method -functional interface(from java 1.8) -wherever there's functional interface we can use -Lamda expression-it's aconcept from scala
+//marker interface - no abstract method ex: Serializable interface
+class bvc implements Serializable {}
 interface Writer {   //100% abstract all methods are only declared,undefined
     void write();  // all methods in interface are public abstract by default
 }
