@@ -13,5 +13,6 @@ public class InnerDemo {
     public static void main(String[] args) {
         Student S = new Student();
        String d= S.degree;
+//       int a= S.a;
     }
 }
