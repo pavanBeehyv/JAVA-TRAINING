@@ -4,13 +4,24 @@
 interface CDE{
     void show();
     default void display(){
-        System.out.println("java interface default method");
+        System.out.println("CDE default method");
     }
 }
-class CdeImpl implements CDE{
+interface DEF{
+    void show();
+    default void display(){
+        System.out.println("DEF default method");
+    }
+}
+class CdeImpl implements CDE, DEF{
     @Override
     public void show() {
         System.out.println("implemented show method");
+    }
+
+    @Override
+    public void display() {     //since we have implemented 2 interfaces having similar default methods
+        CDE.super.display(); //we need to remove that ambiguity by creating that default method in here & mention which one to call
     }
 }
 public class LamdaExpression {
